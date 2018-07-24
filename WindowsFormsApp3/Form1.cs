@@ -46,15 +46,18 @@ namespace WindowsFormsApp3
             button23.Text = "0";
             button24.Text = ".";
             button25.Text = "=";
-            label1.Text = "0";
+            label2.Text = "0";
           
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            stringBuilder.Append("1");
-            label1.Text = stringBuilder.ToString();
-            
+            Button senderCast = sender as Button;
+
+            stringBuilder.ToString().Last(); //axirinci chari qaytarir
+            stringBuilder.Append(senderCast.Text);
+            label2.Text = stringBuilder.ToString();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
